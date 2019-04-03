@@ -1,0 +1,64 @@
+title: 이용단의 기술 블로그
+email: wooridai@hanmail.net
+description: |
+baseurl: ''
+#url: 'https://wooridai.github.io'
+timezone: Asia/Seoul
+
+repository: leeyongdan/leeyongdan.github.io
+
+permalink: /:year/:month/:day/:title/
+
+excerpt_separator: <!--more-->
+
+markdown: kramdown
+
+krandown:
+  input: GFM
+  highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: '/page/:num/'
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+defaults:
+  - scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
+  - scope:
+      path: ''
+      type: tags
+    values:
+      layout: tag
+
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+keep_files: [assets, files]
+github: [metadata]
+# iolo's custom
+author: wooridai@hanmail.net
+image: '/assets/images/default_blog_cover.jpg'
+asset_url: /assets
+#google_analytics:
+  #ua: 'UA-72007721-1'
+#facebook:
+  #app_id: '1204347326263800'
+  #username: wooridai
+#twitter:
+  #username: wooridai
+#google_plus:
+  #username: wooridai
+github_url:
+  username: wooridai
